@@ -1,0 +1,48 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve",
+    "build": "npx webpack",
+    "deploy": "firebase deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.6",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.0"
+  },
+  "dependencies": {
+    "@fullcalendar/adaptive": "^6.0.0",
+    "@fullcalendar/core": "^6.0.0",
+    "@fullcalendar/daygrid": "^6.0.0",
+    "@fullcalendar/interaction": "^6.0.0",
+    "@fullcalendar/list": "^6.0.0",
+    "@fullcalendar/moment": "^6.0.0",
+    "@fullcalendar/resource": "^6.0.0",
+    "@fullcalendar/resource-timeline": "^6.0.0",
+    "@fullcalendar/timegrid": "^6.0.0",
+    "@stomp/stompjs": "^6.1.2",
+    "@types/jquery": "^3.5.14",
+    "axios": "^1.2.0",
+    "bootstrap": "^5.2.1",
+    "jquery": "^3.6.2",
+    "jquery-touchswipe": "^1.6.19",
+    "moment": "^2.22",
+    "popper.js": "^1.16.1",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "sockjs": "^0.3.24",
+    "sockjs-client": "^1.6.1",
+    "websocket": "^1.0.34",
+    "wordcloud": "^1.2.2"
+  }
+}

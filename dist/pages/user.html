@@ -1,0 +1,105 @@
+<div class="form-wrapper">
+  <div class="form col-5">
+    <h2>Notification Settings</h2>
+    <form id="settings">
+      <div class="form-floating">
+        <select class="form-select" id="EVENT_CHANGED" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="EVENT_CHANGED">The event was changed</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="INVITE_GUEST" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="INVITE_GUEST">Invitation to new event</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="UNINVITE_GUEST" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="UNINVITE_GUEST">Uninvitation from event</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="USER_STATUS_CHANGED" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="USER_STATUS_CHANGED">User status was changed for your event</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="USER_ROLE_CHANGED" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="USER_ROLE_CHANGED">Your role at event was changed to</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="CANCEL_EVENT" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="CANCEL_EVENT">Event was cncelled</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="UPCOMING_EVENT" aria-label="Floating label select example">
+          <option value="NONE">No</option>
+          <option value="POPUP">Toast</option>
+          <option value="EMAIL">Email</option>
+          <option value="ALL">Email and Toast</option>
+        </select>
+        <label for="UPCOMING_EVENT">Upcoming event</label>
+      </div>
+
+      <div class="form-floating">
+        <select class="form-select" id="notificationRangeSelect" aria-label="Floating label select example">
+          <option value="TEN_MINUTES">10 minutes</option>
+          <option value="THIRTY_MINUTES">30 minutes</option>
+          <option value="ONE_HOUR">1 hour</option>
+          <option value="ONE_DAY">24 hours</option>
+        </select>
+        <label for="INVITE_GUEST">Time to upcoming event</label>
+      </div>
+
+      <button type="submit" id="updateNotSetBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResponse">Save</button>
+    </form>
+  </div>
+
+  <div class="form col-5">
+    <h2>User Location</h2>
+    <form id="settingsLocation">
+      <div class="form-floating">
+        <select class="form-select" id="city" aria-label="Floating label select example">
+          <option value="JERUSALEM">Jerusalem</option>
+          <option value="PARIS">Paris</option>
+          <option value="LONDON">London</option>
+          <option value="NEW_YORK">New York</option>
+        </select>
+        <label for="city">Timezone</label>
+      </div>
+
+      <button type="submit" id="updateCity" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResponse">Save</button>
+    </form>
+  </div>
+</div>

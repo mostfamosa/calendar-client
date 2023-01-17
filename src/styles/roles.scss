@@ -1,0 +1,66 @@
+// loggedin
+body.loggedin header {
+    .navbar-nav .menuItems {
+      //  li.login,
+      li.signup {
+        display: none;
+      }
+    }
+  }
+  
+  body:not(.loggedin) header {
+    .navbar-nav .menuItems {
+      li.settings {
+        display: none;
+      }  
+    }
+    .time, .city {
+      display: none;
+    }
+  }
+
+// organizer / admin / guest
+#eventModal.admin,
+#eventModal.guest {
+    .users .listWrapper div[class*="ChangeRole"],
+    .users .listWrapper div[class*="Remove"] {
+        display: none;
+    }
+
+    .modal-header-buttons #deleteEventButton {
+        display: none;
+    }
+}
+
+#eventModal.organizer {
+  .modal-footer-buttons .arrive, 
+  .modal-footer-buttons #hide {
+        display: none;
+    }
+}
+
+#eventModal.guest  {
+  .users .row.addGuest,
+  #editEventButton {
+    display: none;
+  }
+}
+
+#eventModal:not(.myEvent) {
+  .modal-content {
+    background-image: none;
+    background-color: rgb(163, 155, 155);
+  }
+
+  .modal-footer-buttons .arrive, 
+  .modal-footer-buttons #hide {
+      display: none;
+  }
+
+  .users .row.addGuest,
+  #editEventButton,
+  #deleteEventButton {
+    display: none;
+  }
+
+}

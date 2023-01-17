@@ -1,0 +1,52 @@
+#eventEditModal {
+
+    .modal-header input.title {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 8px;
+        border-radius: 10px;
+        height: 35px;
+    }
+
+    textarea {
+        margin-bottom: 8px;
+        border-radius: 10px;
+    }
+
+
+    //admin edit view
+    div.admin {
+        .title, #time, #date, #duration  {
+            pointer-events: none;
+            background-color: #dddddd;
+        }
+
+        .bi {
+            display: none;
+        }
+    }
+
+    //guest edit view
+    div.guest {
+        .title, #time, #date, #duration, #location, #description, #checkbox {
+            pointer-events: none;
+            background-color: #dddddd;
+        }
+
+        .bi {
+            display: none;
+        }
+
+        #SaveNewEventBtn{
+            display: none;
+        }
+
+        .row.addGuest {
+            display: none;
+        }
+    }
+}

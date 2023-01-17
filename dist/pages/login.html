@@ -1,0 +1,30 @@
+<div class="form-wrapper">
+  <div class="form col-5">
+    <h2>Log In</h2>
+    <form id="login">
+      <div class="form-floating mb-5 col-8">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-5 col-8">
+        <input type="password" class="form-control" id="password" placeholder="Password" />
+        <label for="floatingPassword">Password</label>
+        <i class="bx bx-hide eye-icon"></i>
+      </div>
+
+      <button type="submit" id="btnLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalResponse">Log In</button>
+    </form>
+
+    <div class="form-link">
+      <div>
+        <span> Log In with Github! </span>
+        <a href="http://github.com/login/oauth/authorize?client_id=ed4a65a952cea0d51abe" rel="noreferrer" class="login-link">Github</a>
+        <!-- target="_blank" -->
+      </div>
+      <span>
+        Don't have an account?
+        <a href="/signup" class="login-link">Sign up</a>
+      </span>
+    </div>
+  </div>
+</div>

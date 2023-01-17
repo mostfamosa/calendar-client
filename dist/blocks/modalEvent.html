@@ -1,0 +1,42 @@
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Share</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <button type="button" class="btn btn-light">Copy Link</button>
+                <button type="button" class="btn btn-light">Share via email</button>
+            </div>
+            <div>
+                <input id="input-user" type="email" placeholder="enter Email">
+                <button id="add-btn" type="button">Add user</button>
+
+                </div>
+                    <div>    
+                        <ul id="users-table">
+                            <li>User 1</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                <label>please select permission</label>
+                <select name="permission">
+                    <option value="OWNER">Owner</option>
+                    <option value="EDITOR">Editor</option>
+                    <option value="VIEWER" selected>Viewer</option>
+                </select>
+                <button id="add-btn" type="button">Update</button>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

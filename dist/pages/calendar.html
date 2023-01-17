@@ -1,0 +1,215 @@
+<div class="cal_view_wrapper">
+  <div class="side_wrapper">
+    <div class="calendar_wrapper">
+      <div>
+        <div class="side_cal_header">
+          <p class="current-date"></p>
+          <div class="icons">
+            <i id="prev" class="bi bi-arrow-left"></i>
+            <i id="next" class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+        <div class="calendar">
+          <ul class="weeks">
+            <li>S</li>
+            <li>M</li>
+            <li>T</li>
+            <li>W</li>
+            <li>T</li>
+            <li>F</li>
+            <li>S</li>
+          </ul>
+          <ul class="days"></ul>
+        </div>
+      </div>
+
+      <div class="shareWrapper">
+        <div class="sharedWithMe">
+          <h4>Shared with me</h4>
+          <ul class="listShared"></ul>
+          <div class="getShared">Show</div>
+        </div>
+      </div>
+
+      <div class="shareBtn">Share my calendar with...</div>
+    </div>
+  </div>
+
+  <div class="main_wrapper">
+    <div id="calendar"></div>
+  </div>
+
+  <!-- event modal  -->
+  <div class="modal modal-lg fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Event title</h5>
+          <div class="modal-header-buttons">
+            <!-- <span class="myRole">role</span> -->
+            <i id="editEventButton" class="bi bi-pencil"></i>
+            <i id="deleteEventButton" class="bi bi-trash3-fill"></i>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="data">
+              <div class="row field public">
+                <div class="col-md-4">Public?</div>
+                <input id="checkbox" type="checkbox" name="public" value="public" disabled class="col-md-2" />
+                <label id="Ischecked" class="col-md-4"></label>
+              </div>
+
+              <div class="row field time">
+                <div class="col-md-4">Time:</div>
+                <div class="col-md-6 mx-auto content"></div>
+              </div>
+              <div class="row field date">
+                <div class="col-md-4">Date:</div>
+                <div class="col-md-6 mx-auto content"></div>
+              </div>
+              <div class="row field duration">
+                <div class="col-md-4">Duration:</div>
+                <div class="col-md-6 mx-auto content"></div>
+              </div>
+              <div class="row field location">
+                <div class="col-md-4">Location:</div>
+                <div class="col-md-6 mx-auto content bg">My House</div>
+              </div>
+              <div class="field description">
+                <div class="col-md-4">Description:</div>
+                <div class="col-md-8 content bg">Tommorow Argentina Wins</div>
+              </div>
+              <!-- <div class="field attachments">
+                <div class="col-md-4">Attachments:</div>
+                <div class="col-md-8 content"></div>
+              </div> -->
+            </div>
+
+            <div class="users">
+              <div class="organizer field">
+                <h4>Organizer:</h4>
+                <div class="">Leon@gmail.com</div>
+              </div>
+
+              <div class="guests field">
+                <h4>Guests:</h4>
+                <div class="row addGuest">
+                  <input class="col-md-9 add bg" />
+                  <div id="eventAddGuest" class="col-md-2 addButton bg">+</div>
+                </div>
+
+                <div class="listWrapper content bg">
+                  <ul id="guestUsersShow"></ul>
+                </div>
+              </div>
+
+              <div class="admins field">
+                <h4>Admins</h4>
+                <div class="listWrapper content bg">
+                  <ul id="adminUsersShow"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-footer-buttons">
+            <div class="arrive">
+              <div class="button" id="approve">Approve</div>
+              <div class="button" id="reject">Reject</div>
+            </div>
+            <div class="button" id="hide">Hide event</div>
+          </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- edit event modal  -->
+  <div class="modal modal-lg fade" id="eventEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLongTitle"></h5> -->
+          <input id="editModalTitle" type="text" class="title" />
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="data">
+              <div class="row field public">
+                <div class="col-md-4">Public?</div>
+                <input id="checkbox" type="checkbox" name="public" value="public" class="col-md-2" />
+                <label id="Ischecked" class="col-md-4"></label>
+              </div>
+              <div class="row field time">
+                <div class="col-md-4">Time:</div>
+                <input id="time" type="time" class="col-md-7" />
+              </div>
+              <div class="row field date">
+                <div class="col-md-4">Date:</div>
+                <input id="date" type="date" class="col-md-7" />
+              </div>
+              <div class="row field duration">
+                <div class="col-md-4">Duration:</div>
+                <input id="duration" type="number" class="col-md-3" max="11" />
+              </div>
+              <div class="row field location">
+                <div class="col-md-4">Location:</div>
+                <input id="location" type="text" class="col-md-7" />
+              </div>
+              <div class="field description">
+                <div class="col-md-4">Description:</div>
+                <textarea id="description" class="col-md-7"></textarea>
+              </div>
+              <!-- <div class="field attachments">
+                <div class="col-md-4">Attachments:</div>
+                <div class="col-md-8 content"></div>
+              </div> -->
+            </div>
+
+            <div class="users">
+              <div class="organizer field2">
+                <h4>Organizer:</h4>
+                <div id="organizerField" class="organizer"></div>
+
+                <div id="guestsField" class="guests field">
+                  <h4>Guests:</h4>
+                  <div class="row addGuest">
+                    <input class="col-md-9 add bg" />
+                    <div id="eventAddGuest" class="col-md-2 addButton bg">+</div>
+                  </div>
+
+                  <div class="listWrapper content bg">
+                    <ul id="guestUsers"></ul>
+                  </div>
+                </div>
+
+                <div class="admins field">
+                  <h4>Admins</h4>
+                  <div class="listWrapper content bg">
+                    <ul id="adminUsers"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button id="SaveNewEventBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

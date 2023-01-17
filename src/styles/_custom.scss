@@ -1,0 +1,148 @@
+/*Google Fonts- Poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import "./forms.scss";
+@import "./calendar.scss";
+@import "./home.scss";
+@import "./eventModal.scss";
+@import "./eventEditModal.scss";
+@import "./notificationToast.scss";
+@import "./roles.scss";
+@import "./share.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #4a4a4e;
+}
+
+i {
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  text-align: center;
+  // font-size: 2rem;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+
+body {
+  background: #d5e1ce;
+  background-image: linear-gradient(#83D9F3, #2C5BB9);
+
+  header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    nav.navbar.navbar-expand-lg {
+      color: #8254ff;
+
+      nav {
+        .menuItems {
+          list-style: none;
+          display: flex;
+      
+          li {
+            margin: 10px;
+      
+            a {
+              text-decoration: none;
+              color: #ffffff;
+              font-size: 24px;
+              font-weight: 400;
+              transition: all 1s ease-in-out;
+              position: relative;
+              text-transform: uppercase;
+      
+              &::before {
+                content: attr(data-item);
+                transition: 1s;
+                color: #8254ff;
+                position: absolute;
+                top: 1;
+                bottom: 1;
+                left: 1;
+                right: 1;
+                width: 0;
+                overflow: hidden;
+              }
+      
+              &:hover {
+                &::before {
+                  width: 100%;
+                  transition: all 0.5s ease-in-out;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .me {
+      padding: 0 1rem;
+      color: #fff;
+      font-size: 20px;
+
+      i, .name {
+        color: #fff;
+      }
+    }
+
+
+
+  }
+
+  .container {
+    height: 83vh;
+    // min-height: 83vh;
+    width: auto;
+    margin: auto;
+
+    #content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  footer {
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    width: 100%;
+    height: 7vh;
+    line-height: 3.5vh;
+    font-size: 14px;
+    background-color: #83D9F3;
+    color: #000000;
+    text-align: center;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid;
+
+    &:hover {
+      border-bottom: 1px transparent;
+    }
+  }
+}

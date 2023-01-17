@@ -1,0 +1,156 @@
+.modal-content {
+    background-image: linear-gradient(#83D9,#0757);
+    font-weight: 700;
+
+    h4 {
+        font-size: 19px;
+    }
+
+    .modal-header-buttons {
+        i {
+            color: #fff;
+        }
+    }
+    
+    .modal-body {
+        .container-fluid {
+            display: flex;
+    
+            .field {
+                margin-bottom: 8px;
+    
+                div.content {
+                    text-align: center;
+                }
+
+                .bg {
+                    background-color: #fff;
+                    border-radius: 8px;
+                    padding: 5px;
+                    border: 1px solid #000;
+                }
+            } 
+    
+            .data {
+                width: 55%;
+                padding-right: 8px;
+    
+                .description .content {
+                    width: 100%;
+                    overflow-y: scroll;
+                    height: 60px;
+                    text-align: left;
+                }
+            }
+            
+            .users {
+                width: 40%;
+                border-left: 2px solid rgba(136, 51, 221, 0.6);
+                padding-left: 15px;
+
+                .guests, .admins {
+                    .listWrapper {
+                        overflow-y: scroll;
+                        height: 80px;
+                        ul {
+                            list-style: none;
+                            text-align: left;
+                            padding-left: 2px;
+
+                            li.userWrpper {
+                                display: flex;
+                                align-items: center;
+
+                                div {
+                                    padding: 5px;
+                                }
+
+                                .adminStatus, .guestStatus {
+                                    border-radius: 50%;
+                                    height: 20px;
+                                    line-height: 10px;
+                                    text-align: center;
+                                    background-color: rgb(196, 194, 194);
+                                }
+
+                                .adminChangeRole, .guestChangeRole {
+                                    i {
+                                        color: blue;
+                                    }
+                                }
+
+                                .adminRemove,  .guestRemove {
+                                    i {
+                                        color: red;
+                                    }
+                                }
+
+                                div.approved {
+                                    color: green;
+                                }
+                                div.rejected {
+                                    color: red;
+                                }
+
+                                
+                            }
+                        }
+                    }
+                }
+
+                .guests .row.addGuest {
+                    padding-left: 15px;
+                    margin-bottom: 10px;
+
+                    .addButton {
+                        background-color: #83D9F3;
+                        color: #fff;
+                        text-align: center;
+                        cursor: pointer;
+                        margin-left: 10px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+            }
+        }
+        
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: space-between;
+
+        .modal-footer-buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+    
+            .arrive {
+                display: flex;
+                justify-content: space-evenly;
+                width: 50%;
+            }
+
+            .button {
+                background-color: aqua;
+                padding: 5px 10px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+
+            #approve {
+                background-color: rgb(165, 226, 165);
+            }
+
+            #reject {
+                background-color: rgb(234, 154, 154);
+            }
+
+            #hide {
+                background-color: rgb(234, 61, 61);
+            }
+    
+        }
+    }
+}
